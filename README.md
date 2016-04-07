@@ -16,8 +16,10 @@ b) Supported value types : String, int, boolean
 1. Add the following xml to your config.xml:
    ```
     <feature name="MyStore">
-    <param name="ios-package" value="AppPreferences" />
-    </feature>
+    
+      <param name="ios-package" value="AppPreferences" />
+   
+   </feature>
     ```
 2. Grab a copy of plugins.js, add it to your project and reference it in index.html:
 ```
