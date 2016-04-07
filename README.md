@@ -1,6 +1,6 @@
 # Corodva-Preference-Plugin
 
-# 1. Description
+### 1. Description
 
 This plugin allows you to store information ( like username ). It uses Preferences in Android and NSUserDefaults in iPhone.
 
@@ -8,43 +8,46 @@ a) Works with PhoneGap >= 3.0.
 
 b) Supported value types : String, int, boolean 
 
-# 2. Installation
+### 2. Installation
 
 
-# iOS
+#### iOS
 
 1. Add the following xml to your config.xml:
-    <feature name=“MyStore”>
+   ```
+    <feature name="MyStore">
     <param name="ios-package" value="AppPreferences" />
     </feature>
-
+    ```
 2. Grab a copy of plugins.js, add it to your project and reference it in index.html:
-
+```
     <script type="text/javascript" src=“js/plugins.js"></script>
-
+```
 3. Download the source files for iOS and copy them to your project.
-
+```
     Copy AppPreferences.h and AppPreferences.m to platforms/ios/<ProjectName>/Plugins
-
+```
 4. Click your project in Xcode, clean and build.
 
-# Android
+#### Android
 
 1. Add the following xml to your config.xml:
-
-    <!-- for Android -->
-    <feature name=“MyStore”>
-        <param name="ios-package" value="AppPreferences" />
+ ```
+    <feature name="MyStore">
+        <param name="android-package" value="com.vamsi.plugins.AppPreferences"/>
     </feature>
+```
 
 2. Grab a copy of plugins.js, add it to your project and reference it in index.html:
+```    
     <script type="text/javascript" src=“js/plugins.js"></script>
-
+```
 3. Download the source files for Android and copy them to your project.
+```    
     Android: Copy AppPreferences.java to platforms/android/src/com/vamsi/plugins (create the folders/packages).
-
-# 3. Usage 
-
+```
+### 3. Usage 
+```
     var MyStore = cordova.require("com.vamsi.plugins.preferences”);
 
     function success (value) {alert('success'); }
@@ -56,3 +59,4 @@ b) Supported value types : String, int, boolean
     MyStore.fetch("userName",success,failure);
 
     MyStore.remove("userName",success,failure);
+```
